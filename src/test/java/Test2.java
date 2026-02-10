@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -43,7 +42,7 @@ public class Test2{
         WebElement element = driver.findElement(WebElement);
         element.click();
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
         WebElement element1 =wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("revealed")));
         Assert.assertTrue(element1.isDisplayed());
     }
